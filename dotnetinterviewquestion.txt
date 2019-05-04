@@ -1,0 +1,57 @@
+Q1 ASP.NET MVC Page Life Cycle?
+
+Q2 Design patten for project development?
+
+Q3  what is global.asax file ?
+
+Q4   what is difference between ViewBag,ViewData and TempData?
+
+
+Q5 what is difference between Session and TempData?
+
+
+Q6  what is  Filters in ASP.NET MVC,Type of Filter ?
+
+
+Q7 what is Routeing in ASP.NET MVC ,explain RouteTable?
+
+
+Q8  what is RenderView(),RenderSection()?
+
+
+Q9  what is WEB API ,how we can create API services for insert,update ,delete,select and find?
+
+
+Q10 Type of ActionResult in Asp.NET MVC?
+
+
+Q11    what is Authentication and Authorization Concept in ASP.NET MVC.How we will implement them in real time project?
+
+
+Q12  what is Partial View in ASP.NET MVC?
+
+
+Q13 How we use validation in ASP.NET MVC?
+
+
+Q14 What is Code First Approach ?
+
+Q15 what is Data First Approach?
+
+
+Q16 How we create Foriegn key relationship using Code First Approach?
+
+
+Q17  How we implement join operation in LINQ TO EF?
+
+
+Q18  How we display Report in ASP.NET MVC?
+
+
+Q19 How we call AJAX in ASP.NET MVC?
+
+
+Q20 JQUERY Selector and JS Events?
+
+
+
