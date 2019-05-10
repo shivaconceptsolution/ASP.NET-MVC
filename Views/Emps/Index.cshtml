@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MVCExample.Models.Emp>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutGuest.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dept.Deptname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dept.Deptname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmpId })
+        </td>
+    </tr>
+}
+
+</table>

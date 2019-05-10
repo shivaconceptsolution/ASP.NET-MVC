@@ -1,0 +1,35 @@
+﻿@model MVCExample.Models.SI
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Enter P")
+            <br />
+            @Html.TextBoxFor(a=>a.P)
+            <br />
+            @Html.Label("Enter R")
+            <br />
+            @Html.TextBoxFor(a=>a.R)
+            <br />
+            @Html.Label("Enter T")
+            <br />
+            @Html.TextBoxFor(a=>a.T)
+            <br />
+            <input type="submit" name="btnsubmit" value="Calculate" />
+
+        }
+        @ViewBag.Result
+    </div>
+</body>
+</html>

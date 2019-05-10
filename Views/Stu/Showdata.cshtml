@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVCExample.Models.Student>
+@{
+    ViewBag.Title = "Showdata";
+    Layout = "~/Views/_LayoutGuest.cshtml";
+}
+
+<h2>View Student Record Here</h2>
+<table border="1">
+    <tr><th>RNO</th><th>SNAME</th><th>BRANCH</th><th>FEES</th></tr>
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(a => item.Rno)</td>
+        <td>@Html.DisplayFor(a => item.Sname)</td>
+        <td>@Html.DisplayFor(a => item.Branch)</td>
+        <td>@Html.DisplayFor(a => item.Fees)</td>
+        <td>@Html.ActionLink("Edit", "Edit", new { id = item.Rno })</td>
+        <td>@Html.ActionLink("Delete", "Delete", new { id = item.Rno })</td>
+    </tr>
+    }
+
+
+</table>
+

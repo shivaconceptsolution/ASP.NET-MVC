@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index")</li>
+            <li>@Html.ActionLink("About", "About")</li>
+            <li>@Html.ActionLink("Contact", "Contact")</li>
+            <li>@Html.ActionLink("Services", "Services")</li>
+            <li>@Html.ActionLink("Logout", "Logout","Student")</li>
+        </ul>
+    </header>
+    <section>
+        <div>
+            @RenderBody()
+        </div>
+
+    </section>
+    <footer>
+
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{
+
+            int a = Convert.ToInt32(ViewData["a"].ToString())+100;
+            int b = ViewBag.a + 100;
+            int c = Convert.ToInt32(TempData["a"].ToString())+100;
+            }
+        <br />
+        a= @a
+        <br />
+        b=@b
+        <br />
+        c=@c
+
+    </div>
+</body>
+</html>

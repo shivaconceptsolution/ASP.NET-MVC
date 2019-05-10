@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{
+            int a = 10, b = 20, c;
+            c = a + b;
+
+        }
+        <p> Result is @c</p>
+
+        <p>@ViewBag.Result</p>
+
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Enter Number to Calculate Square")
+            <br />
+            @Html.TextBox("txtnum1")
+            <br />
+            <input type="submit" name="btnsubmit" value="Click" />
+
+
+        }
+
+        
+        @ViewBag.Result1
+    </div>
+</body>
+</html>

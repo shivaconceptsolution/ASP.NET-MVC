@@ -1,0 +1,19 @@
+﻿@model MVCExample.Models.Register
+@{
+    ViewBag.Title = "Reg";
+    Layout = "~/Views/_LayoutGuest.cshtml";
+}
+
+<h2>New User Register Here</h2>
+@using (Html.BeginForm())
+{
+<table>
+    <tr><td>Enter UserId</td><td>@Html.TextBoxFor(a => a.UserId)</td></tr>
+    <tr><td>Enter Password</td><td>@Html.PasswordFor(a => a.Pass)</td></tr>
+    <tr><td>Enter Emailid</td><td>@Html.TextBoxFor(a => a.Email)</td></tr>
+    <tr><td>Enter Mobileno</td><td>@Html.TextBoxFor(a => a.Mobile)</td></tr>
+    <tr><td colspan="2" align="right"><input type="submit" name="btnsubmit" value="Submit" /> </td></tr>
+
+</table>
+}
+@ViewBag.Data

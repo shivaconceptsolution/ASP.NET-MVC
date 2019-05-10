@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MVCExample.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutGuest.cshtml";
+}
+
+<h2>Welcome @TempData["uid"]</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.DropDownList("Rno")
+</p>
+<table class="table" border="1">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Branch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fees)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Branch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fees)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Rno }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Rno }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Rno })
+        </td>
+    </tr>
+}
+
+</table>
