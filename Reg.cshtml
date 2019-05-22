@@ -1,0 +1,85 @@
+﻿@model MVCExample.Models.Register
+@{
+    ViewBag.Title = "Reg";
+    Layout = "~/Views/_LayoutGuest.cshtml";
+}
+<script src="~/Scripts/jquery-1.8.0.js"></script>
+
+<script>
+    
+    $(document).ready(function () {
+
+        $(".btn").click(function () {
+            if ($("#UserId").val().length == 0) {
+            
+            $("#sp1").html("Enter UserId ");
+            return false;
+        }
+        if (!isNaN($("#UserId").val())) {
+            // alert("enter userid");
+            $("#sp1").html("UserId Should be Alphabets ");
+            return false;
+        }
+        else if ($("#Pass").val().length <5) {
+            //alert("password should be above five digit");
+            $("#sp2").html("Enter Password ");
+            return false;
+        }
+        else if (isNaN($("#Mobile").val())) {
+            alert("mobileno should be alphabets");
+            return false;
+        }
+        else if ($("#Mobile").val().length!=10) {
+            alert("mobileno should be 10 digit");
+            return false;
+        }
+
+
+        });
+
+
+
+    });
+
+
+    //function validate() {
+    //    if (document.getElementById("UserId").value.length == 0) {
+    //        // alert("enter userid");
+    //        document.getElementById("sp1").innerHTML = "Enter UserId ";
+    //        return false;
+    //    }
+    //    if (!isNaN(document.getElementById("UserId").value)) {
+    //        // alert("enter userid");
+    //        document.getElementById("sp1").innerHTML = "UserId Should be Alphabets ";
+    //        return false;
+    //    }
+    //    else if (document.getElementById("Pass").value.length <5) {
+    //        //alert("password should be above five digit");
+    //        document.getElementById("sp2").innerHTML = "Enter Password ";
+    //        return false;
+    //    }
+    //    else if (isNaN(document.getElementById("Mobile").value)) {
+    //        alert("mobileno should be alphabets");
+    //        return false;
+    //    }
+    //    else if (document.getElementById("Mobile").value.length!=10) {
+    //        alert("mobileno should be 10 digit");
+    //        return false;
+    //    }
+    //}
+
+
+</script>
+<h2>New User Register Here</h2>
+@using (Html.BeginForm())
+{
+<table>
+    <tr><td>Enter UserId</td><td>@Html.TextBoxFor(a => a.UserId,new {required=true})<span id="sp1"></span></td></tr>
+    <tr><td>Enter Password</td><td>@Html.PasswordFor(a => a.Pass, new { required = true })<span id="sp2"></span></td></tr>
+    <tr><td>Enter Emailid</td><td>@Html.TextBoxFor(a => a.Email, new { required = true,type="email" })</td></tr>
+    <tr><td>Enter Mobileno</td><td>@Html.TextBoxFor(a => a.Mobile, new { required = true,type="number" })</td></tr>
+    <tr><td colspan="2" align="right"><input type="submit" class="btn" id="btn" name="btnsubmit" value="Submit" onclick="return validate()" /> </td></tr>
+
+</table>
+}
+@ViewBag.Data
