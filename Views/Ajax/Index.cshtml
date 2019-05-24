@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script>
+        function showdata(a) {
+
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                document.getElementById("res").innerHTML = xmlhttp.responseText;
+            }
+            xmlhttp.open("POST", "ajax/searchdemo/"+a, true);
+            xmlhttp.send();
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div> 
+        <input type="text" id="txtdata" placeholder="Enter data" onkeyup="showdata(this.value)"  />
+        <br />
+        @*<select id="s1" onchange="showdata(this.value)">
+            <option value="1001">s</option>
+            <option value="1002">suresh</option>
+            <option value="1003">d</option>
+
+        </select>*@
+        @Html.DropDownList("StuData",null,new { @onchange="showdata(this.value)"})
+        <div id="res"></div>
+    </div>
+</body>
+</html>

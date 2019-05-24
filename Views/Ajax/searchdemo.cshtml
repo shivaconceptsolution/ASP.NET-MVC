@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<MVCExample.Models.Student>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.DisplayFor(a => item.Sname)</li>
+        <li>@Html.DisplayFor(a => item.Branch)</li>
+        <li>@Html.DisplayFor(a => item.Fees)</li>
+        <li>@Html.DisplayFor(a => item.Rno)</li>
+    }
+
+
+</ul>
